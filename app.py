@@ -1,9 +1,11 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.responses import FileResponse
-
+from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
 
 app = FastAPI()
+
+template = Jinja2Templates(directory="templates")
 
 
 class Item(BaseModel):
@@ -11,8 +13,8 @@ class Item(BaseModel):
 
 
 @app.get("/")
-async def root():
-    return {"message": "Hello World"}
+async def root(request: Request):
+    return template.TemplateResponse("base.html", {"request": request})
 
 
 @app.get('/favicon.ico', include_in_schema=False)
