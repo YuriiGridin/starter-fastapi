@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gridin Yurii</title>
-<link rel="stylesheet" href="css/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gridin Yurii</title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .gradient-background {
+      height: 100%;
+      background: linear-gradient(to bottom, #e9f78b, #85d7ff);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #response-container {
+      padding: 0 15px;
+      background-color: #4e8af9;
+      border-radius: 10px;
+      color: white;
+    }
+
+    .signin-button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: #007bff;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .signin-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
+
 <body>
-<div class="gradient-background">
-  <div id="response-container">
+  <div class="gradient-background">
+    <div id="response-container">
+      <p>Hello, Yurii Gridin!</p>
+      <p><b>FastApi Edition</b></p>
+    </div>
+    <a href="//app.cyclic.sh/api/login" class="signin-button">Sign in to Cyclic</a>
   </div>
-</div>
 </body>
+
 </html>

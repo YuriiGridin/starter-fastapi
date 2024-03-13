@@ -14,7 +14,7 @@ class Item(BaseModel):
 
 @app.get("/")
 async def root(request: Request):
-    return template.TemplateResponse("base.html", {"request": request})
+    return template.TemplateResponse("index.html", {"request": request})
 
 
 @app.get('/favicon.ico', include_in_schema=False)
